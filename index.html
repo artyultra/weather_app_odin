@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/weather_app.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Weather App</h1>
+      <h4 id="current-address"></h4>
+    </header>
+    <div id="app">
+      <div id="weather-form">
+        <input id="city-input" type="text" placeholder="Los Angeles, CA" />
+        <button id="get-weather">Get Weather</button>
+      </div>
+      <div id="weather-container">
+        <div id="current-weather">
+          <div id="left-side">
+            <div id="top-left">
+              <img id="current-weather-icon" src="" />
+              <div id="weather-temp">
+                <span class="temp-value"></span>
+                <div id="temp-unit-selector">
+                  <span class="temp-unit fahrenheit selected">°F</span>
+                  <span class="temp-unit-divider">|</span>
+                  <span class="temp-unit celsius">°C</span>
+                </div>
+              </div>
+              <div id="current-weather-description">
+                <div id="current-weather-description-item">
+                  <span class="current-weather-description precipitation"
+                    >Precipitation:
+                  </span>
+                  <span class="current-weather-description precipitation value"
+                    >0%</span
+                  >
+                </div>
+                <div id="current-weather-description-item">
+                  <span class="current-weather-description humidity"
+                    >Humidity:
+                  </span>
+                  <span class="current-weather-description humidity value"
+                    >70%</span
+                  >
+                </div>
+                <div id="current-weather-description-item">
+                  <span class="current-weather-description windspeed"
+                    >Wind:
+                  </span>
+                  <span class="current-weather-description windspeed value"
+                    >7mph</span
+                  >
+                </div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div id="bottom-left">
+              <button class="hourly-button selected" id="temperature-hourly">
+                Temperature
+              </button>
+              <span class="hourly-button-divider">|</span>
+              <button class="hourly-button" id="precipitation-hourly">
+                Precipitation
+              </button>
+              <span class="hourly-button-divider">|</span>
+              <button class="hourly-button" id="wind-hourly">Wind</button>
+            </div>
+          </div>
+          <div id="right-side">
+            <span class="weather-app title">Weather</span>
+            <span class="weather-app date">Monday 3:00PM</span>
+            <span class="weather-app conditions">Sunny</span>
+          </div>
+        </div>
+        <div id="hourly-temperature-chart-frame">
+          <canvas id="hourly-temperature-chart"></canvas>
+        </div>
+        <div id="upcoming-weather-forecast">
+          <div id="upcoming-weather-forecast-frame"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Made with ❤️ by <a href="https://github.com/artyultra/">artyultra</a>
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
