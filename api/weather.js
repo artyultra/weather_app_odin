@@ -3,7 +3,8 @@
 
 import { getCurrentLocation } from "../services/currentLocation";
 
-const api_key = "7R5LNJ4U8V8HM5UGWQFV5J7AW";
+const api_key = import.meta.env.VITE_API_KEY;
+
 const base_url =
   "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
 
